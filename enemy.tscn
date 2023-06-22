@@ -1,0 +1,122 @@
+[gd_scene load_steps=17 format=3 uid="uid://jiipnqx0ktr6"]
+
+[ext_resource type="Texture2D" uid="uid://ckgcwohfp76qx" path="res://free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Death_8.png" id="1_hu30a"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_nggi7"]
+[ext_resource type="Texture2D" uid="uid://dfm7m0hcoavvk" path="res://Characters/character_0000.png" id="2_bkhjq"]
+[ext_resource type="Texture2D" uid="uid://b8kejjibsl3vu" path="res://Characters/character_0001.png" id="3_oy66b"]
+[ext_resource type="Texture2D" uid="uid://dkark8tv0mb4" path="res://Characters/character_0002.png" id="4_8l2f4"]
+[ext_resource type="Texture2D" uid="uid://0qac7yye6us3" path="res://Characters/character_0003.png" id="5_g5qch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r4xv"]
+size = Vector2(28, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kys5"]
+atlas = ExtResource("1_hu30a")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sope"]
+atlas = ExtResource("1_hu30a")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7si4"]
+atlas = ExtResource("1_hu30a")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wgt6"]
+atlas = ExtResource("1_hu30a")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65wfy"]
+atlas = ExtResource("1_hu30a")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fov2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kys5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sope")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7si4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wgt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65wfy")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bkhjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oy66b")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8l2f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g5qch")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r58v"]
+size = Vector2(200, 93.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_636d1"]
+size = Vector2(28, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga38e"]
+size = Vector2(32, 14)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_nggi7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_8r4xv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.19209e-07, -16.5)
+scale = Vector2(1.5, 1.375)
+sprite_frames = SubResource("SpriteFrames_fov2t")
+animation = &"Idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(0, -46.375)
+shape = SubResource("RectangleShape2D_7r58v")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_636d1")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_ga38e")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]

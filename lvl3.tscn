@@ -1,0 +1,3204 @@
+[gd_scene load_steps=12 format=3 uid="uid://wdl0r3lpaujv"]
+
+[ext_resource type="PackedScene" uid="uid://dyb8nb5ojb54d" path="res://background.tscn" id="1_b4ay6"]
+[ext_resource type="Texture2D" uid="uid://d2huiryh6qnim" path="res://Tilemap/tiles.png" id="2_kd6cc"]
+[ext_resource type="PackedScene" uid="uid://cjenl5cvnbm6a" path="res://Player/player.tscn" id="3_og3ft"]
+[ext_resource type="PackedScene" uid="uid://jiipnqx0ktr6" path="res://enemy.tscn" id="4_l0nai"]
+[ext_resource type="PackedScene" uid="uid://cxcsin0pw17uv" path="res://Collectables/star.tscn" id="4_qaj82"]
+[ext_resource type="PackedScene" uid="uid://c8vvxhgxskihf" path="res://Collectables/coin.tscn" id="5_ipgrp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxw6n"]
+texture = ExtResource("2_kd6cc")
+margins = Vector2i(1, 0)
+separation = Vector2i(4, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+7:0/0 = 0
+7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:0/0/physics_layer_0/angular_velocity = 0.0
+8:0/0 = 0
+8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:0/0/physics_layer_0/angular_velocity = 0.0
+9:0/0 = 0
+9:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:0/0/physics_layer_0/angular_velocity = 0.0
+10:0/0 = 0
+10:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:0/0/physics_layer_0/angular_velocity = 0.0
+11:0/0 = 0
+11:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:0/0/physics_layer_0/angular_velocity = 0.0
+12:0/0 = 0
+12:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:0/0/physics_layer_0/angular_velocity = 0.0
+13:0/0 = 0
+13:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:0/0/physics_layer_0/angular_velocity = 0.0
+14:0/0 = 0
+14:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:0/0/physics_layer_0/angular_velocity = 0.0
+15:0/0 = 0
+15:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:0/0/physics_layer_0/angular_velocity = 0.0
+16:0/0 = 0
+16:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:0/0/physics_layer_0/angular_velocity = 0.0
+17:0/0 = 0
+17:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:0/0/physics_layer_0/angular_velocity = 0.0
+18:0/0 = 0
+18:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:0/0/physics_layer_0/angular_velocity = 0.0
+19:0/0 = 0
+19:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+7:1/0 = 0
+7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:1/0/physics_layer_0/angular_velocity = 0.0
+8:1/0 = 0
+8:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:1/0/physics_layer_0/angular_velocity = 0.0
+9:1/0 = 0
+9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:1/0/physics_layer_0/angular_velocity = 0.0
+10:1/0 = 0
+10:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:1/0/physics_layer_0/angular_velocity = 0.0
+11:1/0 = 0
+11:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:1/0/physics_layer_0/angular_velocity = 0.0
+12:1/0 = 0
+12:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:1/0/physics_layer_0/angular_velocity = 0.0
+13:1/0 = 0
+13:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:1/0/physics_layer_0/angular_velocity = 0.0
+14:1/0 = 0
+14:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:1/0/physics_layer_0/angular_velocity = 0.0
+15:1/0 = 0
+15:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:1/0/physics_layer_0/angular_velocity = 0.0
+16:1/0 = 0
+16:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:1/0/physics_layer_0/angular_velocity = 0.0
+17:1/0 = 0
+17:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:1/0/physics_layer_0/angular_velocity = 0.0
+18:1/0 = 0
+18:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:1/0/physics_layer_0/angular_velocity = 0.0
+19:1/0 = 0
+19:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0 = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:2/0/physics_layer_0/angular_velocity = 0.0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:2/0 = 0
+9:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:2/0/physics_layer_0/angular_velocity = 0.0
+10:2/0 = 0
+10:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:2/0/physics_layer_0/angular_velocity = 0.0
+10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:2/0 = 0
+11:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:2/0/physics_layer_0/angular_velocity = 0.0
+12:2/0 = 0
+12:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:2/0/physics_layer_0/angular_velocity = 0.0
+13:2/0 = 0
+13:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:2/0/physics_layer_0/angular_velocity = 0.0
+14:2/0 = 0
+14:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:2/0/physics_layer_0/angular_velocity = 0.0
+15:2/0 = 0
+15:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:2/0/physics_layer_0/angular_velocity = 0.0
+16:2/0 = 0
+16:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:2/0/physics_layer_0/angular_velocity = 0.0
+17:2/0 = 0
+17:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:2/0/physics_layer_0/angular_velocity = 0.0
+18:2/0 = 0
+18:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:2/0/physics_layer_0/angular_velocity = 0.0
+19:2/0 = 0
+19:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+6:3/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+7:3/0 = 0
+7:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:3/0/physics_layer_0/angular_velocity = 0.0
+8:3/0 = 0
+8:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:3/0/physics_layer_0/angular_velocity = 0.0
+9:3/0 = 0
+9:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:3/0/physics_layer_0/angular_velocity = 0.0
+10:3/0 = 0
+10:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:3/0/physics_layer_0/angular_velocity = 0.0
+11:3/0 = 0
+11:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:3/0/physics_layer_0/angular_velocity = 0.0
+12:3/0 = 0
+12:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:3/0/physics_layer_0/angular_velocity = 0.0
+13:3/0 = 0
+13:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:3/0/physics_layer_0/angular_velocity = 0.0
+14:3/0 = 0
+14:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:3/0/physics_layer_0/angular_velocity = 0.0
+15:3/0 = 0
+15:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:3/0/physics_layer_0/angular_velocity = 0.0
+16:3/0 = 0
+16:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:3/0/physics_layer_0/angular_velocity = 0.0
+17:3/0 = 0
+17:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:3/0/physics_layer_0/angular_velocity = 0.0
+18:3/0 = 0
+18:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:3/0/physics_layer_0/angular_velocity = 0.0
+19:3/0 = 0
+19:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0 = 0
+7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:4/0/physics_layer_0/angular_velocity = 0.0
+8:4/0 = 0
+8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:4/0/physics_layer_0/angular_velocity = 0.0
+9:4/0 = 0
+9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:4/0/physics_layer_0/angular_velocity = 0.0
+10:4/0 = 0
+10:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:4/0/physics_layer_0/angular_velocity = 0.0
+11:4/0 = 0
+11:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:4/0/physics_layer_0/angular_velocity = 0.0
+12:4/0 = 0
+12:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:4/0/physics_layer_0/angular_velocity = 0.0
+13:4/0 = 0
+13:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:4/0/physics_layer_0/angular_velocity = 0.0
+14:4/0 = 0
+14:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:4/0/physics_layer_0/angular_velocity = 0.0
+15:4/0 = 0
+15:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:4/0/physics_layer_0/angular_velocity = 0.0
+16:4/0 = 0
+16:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:4/0/physics_layer_0/angular_velocity = 0.0
+17:4/0 = 0
+17:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:4/0/physics_layer_0/angular_velocity = 0.0
+18:4/0 = 0
+18:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:4/0/physics_layer_0/angular_velocity = 0.0
+19:4/0 = 0
+19:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0 = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+5:5/0 = 0
+5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0 = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
+7:5/0 = 0
+7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:5/0/physics_layer_0/angular_velocity = 0.0
+8:5/0 = 0
+8:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:5/0/physics_layer_0/angular_velocity = 0.0
+9:5/0 = 0
+9:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:5/0/physics_layer_0/angular_velocity = 0.0
+10:5/0 = 0
+10:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:5/0/physics_layer_0/angular_velocity = 0.0
+11:5/0 = 0
+11:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:5/0/physics_layer_0/angular_velocity = 0.0
+12:5/0 = 0
+12:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:5/0/physics_layer_0/angular_velocity = 0.0
+13:5/0 = 0
+13:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:5/0/physics_layer_0/angular_velocity = 0.0
+14:5/0 = 0
+14:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:5/0/physics_layer_0/angular_velocity = 0.0
+15:5/0 = 0
+15:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:5/0/physics_layer_0/angular_velocity = 0.0
+16:5/0 = 0
+16:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:5/0/physics_layer_0/angular_velocity = 0.0
+17:5/0 = 0
+17:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:5/0/physics_layer_0/angular_velocity = 0.0
+18:5/0 = 0
+18:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:5/0/physics_layer_0/angular_velocity = 0.0
+19:5/0 = 0
+19:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:5/0/physics_layer_0/angular_velocity = 0.0
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+1:6/0 = 0
+1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/0 = 0
+3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_0/angular_velocity = 0.0
+4:6/0 = 0
+4:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:6/0/physics_layer_0/angular_velocity = 0.0
+5:6/0 = 0
+5:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:6/0/physics_layer_0/angular_velocity = 0.0
+6:6/0 = 0
+6:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/0/physics_layer_0/angular_velocity = 0.0
+7:6/0 = 0
+7:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/0/physics_layer_0/angular_velocity = 0.0
+8:6/0 = 0
+8:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:6/0/physics_layer_0/angular_velocity = 0.0
+9:6/0 = 0
+9:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:6/0/physics_layer_0/angular_velocity = 0.0
+10:6/0 = 0
+10:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:6/0/physics_layer_0/angular_velocity = 0.0
+11:6/0 = 0
+11:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:6/0/physics_layer_0/angular_velocity = 0.0
+13:6/0 = 0
+13:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:6/0/physics_layer_0/angular_velocity = 0.0
+14:6/0 = 0
+14:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:6/0/physics_layer_0/angular_velocity = 0.0
+15:6/0 = 0
+15:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:6/0/physics_layer_0/angular_velocity = 0.0
+16:6/0 = 0
+16:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:6/0/physics_layer_0/angular_velocity = 0.0
+17:6/0 = 0
+17:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:6/0/physics_layer_0/angular_velocity = 0.0
+18:6/0 = 0
+18:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:6/0/physics_layer_0/angular_velocity = 0.0
+19:6/0 = 0
+19:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:6/0/physics_layer_0/angular_velocity = 0.0
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/0 = 0
+1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/0/physics_layer_0/angular_velocity = 0.0
+2:7/0 = 0
+2:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/0/physics_layer_0/angular_velocity = 0.0
+3:7/0 = 0
+3:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:7/0/physics_layer_0/angular_velocity = 0.0
+4:7/0 = 0
+4:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:7/0/physics_layer_0/angular_velocity = 0.0
+5:7/0 = 0
+5:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:7/0/physics_layer_0/angular_velocity = 0.0
+6:7/0 = 0
+6:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:7/0/physics_layer_0/angular_velocity = 0.0
+7:7/0 = 0
+7:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:7/0/physics_layer_0/angular_velocity = 0.0
+8:7/0 = 0
+8:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:7/0/physics_layer_0/angular_velocity = 0.0
+9:7/0 = 0
+9:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:7/0/physics_layer_0/angular_velocity = 0.0
+10:7/0 = 0
+10:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:7/0/physics_layer_0/angular_velocity = 0.0
+11:7/0 = 0
+11:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:7/0/physics_layer_0/angular_velocity = 0.0
+12:7/0 = 0
+12:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:7/0/physics_layer_0/angular_velocity = 0.0
+13:7/0 = 0
+13:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:7/0/physics_layer_0/angular_velocity = 0.0
+14:7/0 = 0
+14:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:7/0/physics_layer_0/angular_velocity = 0.0
+15:7/0 = 0
+15:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:7/0/physics_layer_0/angular_velocity = 0.0
+16:7/0 = 0
+16:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:7/0/physics_layer_0/angular_velocity = 0.0
+17:7/0 = 0
+17:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:7/0/physics_layer_0/angular_velocity = 0.0
+18:7/0 = 0
+18:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:7/0/physics_layer_0/angular_velocity = 0.0
+19:7/0 = 0
+19:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:7/0/physics_layer_0/angular_velocity = 0.0
+0:8/0 = 0
+0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:8/0/physics_layer_0/angular_velocity = 0.0
+1:8/0 = 0
+1:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:8/0/physics_layer_0/angular_velocity = 0.0
+2:8/0 = 0
+2:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:8/0/physics_layer_0/angular_velocity = 0.0
+3:8/0 = 0
+3:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:8/0/physics_layer_0/angular_velocity = 0.0
+4:8/0 = 0
+4:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:8/0/physics_layer_0/angular_velocity = 0.0
+5:8/0 = 0
+5:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:8/0/physics_layer_0/angular_velocity = 0.0
+6:8/0 = 0
+6:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:8/0/physics_layer_0/angular_velocity = 0.0
+7:8/0 = 0
+7:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:8/0/physics_layer_0/angular_velocity = 0.0
+8:8/0 = 0
+8:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:8/0/physics_layer_0/angular_velocity = 0.0
+9:8/0 = 0
+9:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:8/0/physics_layer_0/angular_velocity = 0.0
+10:8/0 = 0
+10:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:8/0/physics_layer_0/angular_velocity = 0.0
+11:8/0 = 0
+11:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:8/0/physics_layer_0/angular_velocity = 0.0
+12:8/0 = 0
+12:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:8/0/physics_layer_0/angular_velocity = 0.0
+13:8/0 = 0
+13:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:8/0/physics_layer_0/angular_velocity = 0.0
+14:8/0 = 0
+14:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:8/0/physics_layer_0/angular_velocity = 0.0
+15:8/0 = 0
+15:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:8/0/physics_layer_0/angular_velocity = 0.0
+16:8/0 = 0
+16:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:8/0/physics_layer_0/angular_velocity = 0.0
+17:8/0 = 0
+17:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:8/0/physics_layer_0/angular_velocity = 0.0
+18:8/0 = 0
+18:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:8/0/physics_layer_0/angular_velocity = 0.0
+19:8/0 = 0
+19:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:8/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_pjwpt"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_vxw6n")
+
+[sub_resource type="GDScript" id="GDScript_cntrs"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = \"HP: \" + str(Game.playerHP)
+"
+
+[sub_resource type="GDScript" id="GDScript_e5pvg"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = \"Gold: \" + str(Game.gold)
+"
+
+[sub_resource type="GDScript" id="GDScript_x1j21"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = \"Stars: \" + str(Game.stars)
+"
+
+[node name="Lvl3" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_pjwpt")
+format = 2
+layer_0/tile_data = PackedInt32Array(1835007, 327680, 0, 1900543, 327680, 0, 1966079, 327680, 0, 2031615, 327680, 0, 2097151, 327680, 0, 2162687, 327680, 0, 2228223, 327680, 0, 2293759, 327680, 0, 2359295, 327680, 0, 2424831, 327680, 0, 2490367, 327680, 0, 2555903, 327680, 0, 2621439, 327680, 0, 2686975, 327680, 0, 1769471, 131072, 0, 1703936, 131072, 0, 1703937, 131072, 0, 1703938, 131072, 0, 1703939, 131072, 0, 1703940, 131072, 0, 1703941, 131072, 0, 1703942, 131072, 0, 1703943, 131072, 0, 1703944, 131072, 0, 1703945, 131072, 0, 1703946, 131072, 0, 1703947, 131072, 0, 1703948, 131072, 0, 1703949, 131072, 0, 1703950, 131072, 0, 1703951, 131072, 0, 1703952, 131072, 0, 1703953, 131072, 0, 1703954, 131072, 0, 1703955, 131072, 0, 1703956, 131072, 0, 1703957, 131072, 0, 1703958, 131072, 0, 1703959, 131072, 0, 1703960, 131072, 0, 1703961, 131072, 0, 1703962, 131072, 0, 1703963, 131072, 0, 1703964, 131072, 0, 1703965, 131072, 0, 1703966, 131072, 0, 1703967, 131072, 0, 1703968, 131072, 0, 1703969, 131072, 0, 1703970, 131072, 0, 1703971, 131072, 0, 1703972, 131072, 0, 1703973, 131072, 0, 1703974, 131072, 0, 1703975, 131072, 0, 1703976, 131072, 0, 1703977, 131072, 0, 1703978, 131072, 0, 1703979, 131072, 0, 1703980, 131072, 0, 1703981, 131072, 0, 1703982, 131072, 0, 1703983, 131072, 0, 1703984, 131072, 0, 1703985, 131072, 0, 1703986, 131072, 0, 1703987, 131072, 0, 1703988, 131072, 0, 1703989, 131072, 0, 1703990, 131072, 0, 1703991, 131072, 0, 1703992, 131072, 0, 1703993, 131072, 0, 1703994, 131072, 0, 1703995, 131072, 0, 1703996, 131072, 0, 1703997, 131072, 0, 1703998, 131072, 0, 1703999, 131072, 0, 1704000, 131072, 0, 1704001, 131072, 0, 1704002, 131072, 0, 1704003, 131072, 0, 1704004, 131072, 0, 1704005, 131072, 0, 1704006, 131072, 0, 1704007, 131072, 0, 1704008, 131072, 0, 1769472, 327680, 0, 1835008, 327680, 0, 1900544, 327680, 0, 1966080, 327680, 0, 2031616, 327680, 0, 2097152, 327680, 0, 2162688, 327680, 0, 2228224, 327680, 0, 2293760, 327680, 0, 2359296, 327680, 0, 2424832, 327680, 0, 2490368, 327680, 0, 2555904, 327680, 0, 2621440, 327680, 0, 1769473, 327680, 0, 1835009, 327680, 0, 1900545, 327680, 0, 1966081, 327680, 0, 2031617, 327680, 0, 2097153, 327680, 0, 2162689, 327680, 0, 2228225, 327680, 0, 2293761, 327680, 0, 2359297, 327680, 0, 2424833, 327680, 0, 2490369, 327680, 0, 2555905, 327680, 0, 2621441, 327680, 0, 1769474, 327680, 0, 1835010, 327680, 0, 1900546, 327680, 0, 1966082, 327680, 0, 2031618, 327680, 0, 2097154, 327680, 0, 2162690, 327680, 0, 2228226, 327680, 0, 2293762, 327680, 0, 2359298, 327680, 0, 2424834, 327680, 0, 2490370, 327680, 0, 2555906, 327680, 0, 2621442, 327680, 0, 1769475, 327680, 0, 1835011, 327680, 0, 1900547, 327680, 0, 1966083, 327680, 0, 2031619, 327680, 0, 2097155, 327680, 0, 2162691, 327680, 0, 2228227, 327680, 0, 2293763, 327680, 0, 2359299, 327680, 0, 2424835, 327680, 0, 2490371, 327680, 0, 2555907, 327680, 0, 2621443, 327680, 0, 1769476, 327680, 0, 1835012, 327680, 0, 1900548, 327680, 0, 1966084, 327680, 0, 2031620, 327680, 0, 2097156, 327680, 0, 2162692, 327680, 0, 2228228, 327680, 0, 2293764, 327680, 0, 2359300, 327680, 0, 2424836, 327680, 0, 2490372, 327680, 0, 2555908, 327680, 0, 2621444, 327680, 0, 1769477, 327680, 0, 1835013, 327680, 0, 1900549, 327680, 0, 1966085, 327680, 0, 2031621, 327680, 0, 2097157, 327680, 0, 2162693, 327680, 0, 2228229, 327680, 0, 2293765, 327680, 0, 2359301, 327680, 0, 2424837, 327680, 0, 2490373, 327680, 0, 2555909, 327680, 0, 2621445, 327680, 0, 1769478, 327680, 0, 1835014, 327680, 0, 1900550, 327680, 0, 1966086, 327680, 0, 2031622, 327680, 0, 2097158, 327680, 0, 2162694, 327680, 0, 2228230, 327680, 0, 2293766, 327680, 0, 2359302, 327680, 0, 2424838, 327680, 0, 2490374, 327680, 0, 2555910, 327680, 0, 2621446, 327680, 0, 1769479, 327680, 0, 1835015, 327680, 0, 1900551, 327680, 0, 1966087, 327680, 0, 2031623, 327680, 0, 2097159, 327680, 0, 2162695, 327680, 0, 2228231, 327680, 0, 2293767, 327680, 0, 2359303, 327680, 0, 2424839, 327680, 0, 2490375, 327680, 0, 2555911, 327680, 0, 2621447, 327680, 0, 1769480, 327680, 0, 1835016, 327680, 0, 1900552, 327680, 0, 1966088, 327680, 0, 2031624, 327680, 0, 2097160, 327680, 0, 2162696, 327680, 0, 2228232, 327680, 0, 2293768, 327680, 0, 2359304, 327680, 0, 2424840, 327680, 0, 2490376, 327680, 0, 2555912, 327680, 0, 2621448, 327680, 0, 1769481, 327680, 0, 1835017, 327680, 0, 1900553, 327680, 0, 1966089, 327680, 0, 2031625, 327680, 0, 2097161, 327680, 0, 2162697, 327680, 0, 2228233, 327680, 0, 2293769, 327680, 0, 2359305, 327680, 0, 2424841, 327680, 0, 2490377, 327680, 0, 2555913, 327680, 0, 2621449, 327680, 0, 1769482, 327680, 0, 1835018, 327680, 0, 1900554, 327680, 0, 1966090, 327680, 0, 2031626, 327680, 0, 2097162, 327680, 0, 2162698, 327680, 0, 2228234, 327680, 0, 2293770, 327680, 0, 2359306, 327680, 0, 2424842, 327680, 0, 2490378, 327680, 0, 2555914, 327680, 0, 2621450, 327680, 0, 1769483, 327680, 0, 1835019, 327680, 0, 1900555, 327680, 0, 1966091, 327680, 0, 2031627, 327680, 0, 2097163, 327680, 0, 2162699, 327680, 0, 2228235, 327680, 0, 2293771, 327680, 0, 2359307, 327680, 0, 2424843, 327680, 0, 2490379, 327680, 0, 2555915, 327680, 0, 2621451, 327680, 0, 1769484, 327680, 0, 1835020, 327680, 0, 1900556, 327680, 0, 1966092, 327680, 0, 2031628, 327680, 0, 2097164, 327680, 0, 2162700, 327680, 0, 2228236, 327680, 0, 2293772, 327680, 0, 2359308, 327680, 0, 2424844, 327680, 0, 2490380, 327680, 0, 2555916, 327680, 0, 2621452, 327680, 0, 1769485, 327680, 0, 1835021, 327680, 0, 1900557, 327680, 0, 1966093, 327680, 0, 2031629, 327680, 0, 2097165, 327680, 0, 2162701, 327680, 0, 2228237, 327680, 0, 2293773, 327680, 0, 2359309, 327680, 0, 2424845, 327680, 0, 2490381, 327680, 0, 2555917, 327680, 0, 2621453, 327680, 0, 1769486, 327680, 0, 1835022, 327680, 0, 1900558, 327680, 0, 1966094, 327680, 0, 2031630, 327680, 0, 2097166, 327680, 0, 2162702, 327680, 0, 2228238, 327680, 0, 2293774, 327680, 0, 2359310, 327680, 0, 2424846, 327680, 0, 2490382, 327680, 0, 2555918, 327680, 0, 2621454, 327680, 0, 1769487, 327680, 0, 1835023, 327680, 0, 1900559, 327680, 0, 1966095, 327680, 0, 2031631, 327680, 0, 2097167, 327680, 0, 2162703, 327680, 0, 2228239, 327680, 0, 2293775, 327680, 0, 2359311, 327680, 0, 2424847, 327680, 0, 2490383, 327680, 0, 2555919, 327680, 0, 2621455, 327680, 0, 1769488, 327680, 0, 1835024, 327680, 0, 1900560, 327680, 0, 1966096, 327680, 0, 2031632, 327680, 0, 2097168, 327680, 0, 2162704, 327680, 0, 2228240, 327680, 0, 2293776, 327680, 0, 2359312, 327680, 0, 2424848, 327680, 0, 2490384, 327680, 0, 2555920, 327680, 0, 2621456, 327680, 0, 1769489, 327680, 0, 1835025, 327680, 0, 1900561, 327680, 0, 1966097, 327680, 0, 2031633, 327680, 0, 2097169, 327680, 0, 2162705, 327680, 0, 2228241, 327680, 0, 2293777, 327680, 0, 2359313, 327680, 0, 2424849, 327680, 0, 2490385, 327680, 0, 2555921, 327680, 0, 2621457, 327680, 0, 1769490, 327680, 0, 1835026, 327680, 0, 1900562, 327680, 0, 1966098, 327680, 0, 2031634, 327680, 0, 2097170, 327680, 0, 2162706, 327680, 0, 2228242, 327680, 0, 2293778, 327680, 0, 2359314, 327680, 0, 2424850, 327680, 0, 2490386, 327680, 0, 2555922, 327680, 0, 2621458, 327680, 0, 1769491, 327680, 0, 1835027, 327680, 0, 1900563, 327680, 0, 1966099, 327680, 0, 2031635, 327680, 0, 2097171, 327680, 0, 2162707, 327680, 0, 2228243, 327680, 0, 2293779, 327680, 0, 2359315, 327680, 0, 2424851, 327680, 0, 2490387, 327680, 0, 2555923, 327680, 0, 2621459, 327680, 0, 1769492, 327680, 0, 1835028, 327680, 0, 1900564, 327680, 0, 1966100, 327680, 0, 2031636, 327680, 0, 2097172, 327680, 0, 2162708, 327680, 0, 2228244, 327680, 0, 2293780, 327680, 0, 2359316, 327680, 0, 2424852, 327680, 0, 2490388, 327680, 0, 2555924, 327680, 0, 2621460, 327680, 0, 1769493, 327680, 0, 1835029, 327680, 0, 1900565, 327680, 0, 1966101, 327680, 0, 2031637, 327680, 0, 2097173, 327680, 0, 2162709, 327680, 0, 2228245, 327680, 0, 2293781, 327680, 0, 2359317, 327680, 0, 2424853, 327680, 0, 2490389, 327680, 0, 2555925, 327680, 0, 2621461, 327680, 0, 1769494, 327680, 0, 1835030, 327680, 0, 1900566, 327680, 0, 1966102, 327680, 0, 2031638, 327680, 0, 2097174, 327680, 0, 2162710, 327680, 0, 2228246, 327680, 0, 2293782, 327680, 0, 2359318, 327680, 0, 2424854, 327680, 0, 2490390, 327680, 0, 2555926, 327680, 0, 2621462, 327680, 0, 1769495, 327680, 0, 1835031, 327680, 0, 1900567, 327680, 0, 1966103, 327680, 0, 2031639, 327680, 0, 2097175, 327680, 0, 2162711, 327680, 0, 2228247, 327680, 0, 2293783, 327680, 0, 2359319, 327680, 0, 2424855, 327680, 0, 2490391, 327680, 0, 2555927, 327680, 0, 2621463, 327680, 0, 1769496, 327680, 0, 1835032, 327680, 0, 1900568, 327680, 0, 1966104, 327680, 0, 2031640, 327680, 0, 2097176, 327680, 0, 2162712, 327680, 0, 2228248, 327680, 0, 2293784, 327680, 0, 2359320, 327680, 0, 2424856, 327680, 0, 2490392, 327680, 0, 2555928, 327680, 0, 2621464, 327680, 0, 1769497, 327680, 0, 1835033, 327680, 0, 1900569, 327680, 0, 1966105, 327680, 0, 2031641, 327680, 0, 2097177, 327680, 0, 2162713, 327680, 0, 2228249, 327680, 0, 2293785, 327680, 0, 2359321, 327680, 0, 2424857, 327680, 0, 2490393, 327680, 0, 2555929, 327680, 0, 2621465, 327680, 0, 1769498, 327680, 0, 1835034, 327680, 0, 1900570, 327680, 0, 1966106, 327680, 0, 2031642, 327680, 0, 2097178, 327680, 0, 2162714, 327680, 0, 2228250, 327680, 0, 2293786, 327680, 0, 2359322, 327680, 0, 2424858, 327680, 0, 2490394, 327680, 0, 2555930, 327680, 0, 2621466, 327680, 0, 1769499, 327680, 0, 1835035, 327680, 0, 1900571, 327680, 0, 1966107, 327680, 0, 2031643, 327680, 0, 2097179, 327680, 0, 2162715, 327680, 0, 2228251, 327680, 0, 2293787, 327680, 0, 2359323, 327680, 0, 2424859, 327680, 0, 2490395, 327680, 0, 2555931, 327680, 0, 2621467, 327680, 0, 1769500, 327680, 0, 1835036, 327680, 0, 1900572, 327680, 0, 1966108, 327680, 0, 2031644, 327680, 0, 2097180, 327680, 0, 2162716, 327680, 0, 2228252, 327680, 0, 2293788, 327680, 0, 2359324, 327680, 0, 2424860, 327680, 0, 2490396, 327680, 0, 2555932, 327680, 0, 2621468, 327680, 0, 1769501, 327680, 0, 1835037, 327680, 0, 1900573, 327680, 0, 1966109, 327680, 0, 2031645, 327680, 0, 2097181, 327680, 0, 2162717, 327680, 0, 2228253, 327680, 0, 2293789, 327680, 0, 2359325, 327680, 0, 2424861, 327680, 0, 2490397, 327680, 0, 2555933, 327680, 0, 2621469, 327680, 0, 1769502, 327680, 0, 1835038, 327680, 0, 1900574, 327680, 0, 1966110, 327680, 0, 2031646, 327680, 0, 2097182, 327680, 0, 2162718, 327680, 0, 2228254, 327680, 0, 2293790, 327680, 0, 2359326, 327680, 0, 2424862, 327680, 0, 2490398, 327680, 0, 2555934, 327680, 0, 2621470, 327680, 0, 1769503, 327680, 0, 1835039, 327680, 0, 1900575, 327680, 0, 1966111, 327680, 0, 2031647, 327680, 0, 2097183, 327680, 0, 2162719, 327680, 0, 2228255, 327680, 0, 2293791, 327680, 0, 2359327, 327680, 0, 2424863, 327680, 0, 2490399, 327680, 0, 2555935, 327680, 0, 2621471, 327680, 0, 1769504, 327680, 0, 1835040, 327680, 0, 1900576, 327680, 0, 1966112, 327680, 0, 2031648, 327680, 0, 2097184, 327680, 0, 2162720, 327680, 0, 2228256, 327680, 0, 2293792, 327680, 0, 2359328, 327680, 0, 2424864, 327680, 0, 2490400, 327680, 0, 2555936, 327680, 0, 2621472, 327680, 0, 1769505, 327680, 0, 1835041, 327680, 0, 1900577, 327680, 0, 1966113, 327680, 0, 2031649, 327680, 0, 2097185, 327680, 0, 2162721, 327680, 0, 2228257, 327680, 0, 2293793, 327680, 0, 2359329, 327680, 0, 2424865, 327680, 0, 2490401, 327680, 0, 2555937, 327680, 0, 2621473, 327680, 0, 1769506, 327680, 0, 1835042, 327680, 0, 1900578, 327680, 0, 1966114, 327680, 0, 2031650, 327680, 0, 2097186, 327680, 0, 2162722, 327680, 0, 2228258, 327680, 0, 2293794, 327680, 0, 2359330, 327680, 0, 2424866, 327680, 0, 2490402, 327680, 0, 2555938, 327680, 0, 2621474, 327680, 0, 1769507, 327680, 0, 1835043, 327680, 0, 1900579, 327680, 0, 1966115, 327680, 0, 2031651, 327680, 0, 2097187, 327680, 0, 2162723, 327680, 0, 2228259, 327680, 0, 2293795, 327680, 0, 2359331, 327680, 0, 2424867, 327680, 0, 2490403, 327680, 0, 2555939, 327680, 0, 2621475, 327680, 0, 1769508, 327680, 0, 1835044, 327680, 0, 1900580, 327680, 0, 1966116, 327680, 0, 2031652, 327680, 0, 2097188, 327680, 0, 2162724, 327680, 0, 2228260, 327680, 0, 2293796, 327680, 0, 2359332, 327680, 0, 2424868, 327680, 0, 2490404, 327680, 0, 2555940, 327680, 0, 2621476, 327680, 0, 1769509, 327680, 0, 1835045, 327680, 0, 1900581, 327680, 0, 1966117, 327680, 0, 2031653, 327680, 0, 2097189, 327680, 0, 2162725, 327680, 0, 2228261, 327680, 0, 2293797, 327680, 0, 2359333, 327680, 0, 2424869, 327680, 0, 2490405, 327680, 0, 2555941, 327680, 0, 2621477, 327680, 0, 1769510, 327680, 0, 1835046, 327680, 0, 1900582, 327680, 0, 1966118, 327680, 0, 2031654, 327680, 0, 2097190, 327680, 0, 2162726, 327680, 0, 2228262, 327680, 0, 2293798, 327680, 0, 2359334, 327680, 0, 2424870, 327680, 0, 2490406, 327680, 0, 2555942, 327680, 0, 2621478, 327680, 0, 1769511, 327680, 0, 1835047, 327680, 0, 1900583, 327680, 0, 1966119, 327680, 0, 2031655, 327680, 0, 2097191, 327680, 0, 2162727, 327680, 0, 2228263, 327680, 0, 2293799, 327680, 0, 2359335, 327680, 0, 2424871, 327680, 0, 2490407, 327680, 0, 2555943, 327680, 0, 2621479, 327680, 0, 1769512, 327680, 0, 1835048, 327680, 0, 1900584, 327680, 0, 1966120, 327680, 0, 2031656, 327680, 0, 2097192, 327680, 0, 2162728, 327680, 0, 2228264, 327680, 0, 2293800, 327680, 0, 2359336, 327680, 0, 2424872, 327680, 0, 2490408, 327680, 0, 2555944, 327680, 0, 2621480, 327680, 0, 1769513, 327680, 0, 1835049, 327680, 0, 1900585, 327680, 0, 1966121, 327680, 0, 2031657, 327680, 0, 2097193, 327680, 0, 2162729, 327680, 0, 2228265, 327680, 0, 2293801, 327680, 0, 2359337, 327680, 0, 2424873, 327680, 0, 2490409, 327680, 0, 2555945, 327680, 0, 2621481, 327680, 0, 1769514, 327680, 0, 1835050, 327680, 0, 1900586, 327680, 0, 1966122, 327680, 0, 2031658, 327680, 0, 2097194, 327680, 0, 2162730, 327680, 0, 2228266, 327680, 0, 2293802, 327680, 0, 2359338, 327680, 0, 2424874, 327680, 0, 2490410, 327680, 0, 2555946, 327680, 0, 2621482, 327680, 0, 1769515, 327680, 0, 1835051, 327680, 0, 1900587, 327680, 0, 1966123, 327680, 0, 2031659, 327680, 0, 2097195, 327680, 0, 2162731, 327680, 0, 2228267, 327680, 0, 2293803, 327680, 0, 2359339, 327680, 0, 2424875, 327680, 0, 2490411, 327680, 0, 2555947, 327680, 0, 2621483, 327680, 0, 1769516, 327680, 0, 1835052, 327680, 0, 1900588, 327680, 0, 1966124, 327680, 0, 2031660, 327680, 0, 2097196, 327680, 0, 2162732, 327680, 0, 2228268, 327680, 0, 2293804, 327680, 0, 2359340, 327680, 0, 2424876, 327680, 0, 2490412, 327680, 0, 2555948, 327680, 0, 2621484, 327680, 0, 1769517, 327680, 0, 1835053, 327680, 0, 1900589, 327680, 0, 1966125, 327680, 0, 2031661, 327680, 0, 2097197, 327680, 0, 2162733, 327680, 0, 2228269, 327680, 0, 2293805, 327680, 0, 2359341, 327680, 0, 2424877, 327680, 0, 2490413, 327680, 0, 2555949, 327680, 0, 2621485, 327680, 0, 1769518, 327680, 0, 1835054, 327680, 0, 1900590, 327680, 0, 1966126, 327680, 0, 2031662, 327680, 0, 2097198, 327680, 0, 2162734, 327680, 0, 2228270, 327680, 0, 2293806, 327680, 0, 2359342, 327680, 0, 2424878, 327680, 0, 2490414, 327680, 0, 2555950, 327680, 0, 2621486, 327680, 0, 1769519, 327680, 0, 1835055, 327680, 0, 1900591, 327680, 0, 1966127, 327680, 0, 2031663, 327680, 0, 2097199, 327680, 0, 2162735, 327680, 0, 2228271, 327680, 0, 2293807, 327680, 0, 2359343, 327680, 0, 2424879, 327680, 0, 2490415, 327680, 0, 2555951, 327680, 0, 2621487, 327680, 0, 1769520, 327680, 0, 1835056, 327680, 0, 1900592, 327680, 0, 1966128, 327680, 0, 2031664, 327680, 0, 2097200, 327680, 0, 2162736, 327680, 0, 2228272, 327680, 0, 2293808, 327680, 0, 2359344, 327680, 0, 2424880, 327680, 0, 2490416, 327680, 0, 2555952, 327680, 0, 2621488, 327680, 0, 1769521, 327680, 0, 1835057, 327680, 0, 1900593, 327680, 0, 1966129, 327680, 0, 2031665, 327680, 0, 2097201, 327680, 0, 2162737, 327680, 0, 2228273, 327680, 0, 2293809, 327680, 0, 2359345, 327680, 0, 2424881, 327680, 0, 2490417, 327680, 0, 2555953, 327680, 0, 2621489, 327680, 0, 1769522, 327680, 0, 1835058, 327680, 0, 1900594, 327680, 0, 1966130, 327680, 0, 2031666, 327680, 0, 2097202, 327680, 0, 2162738, 327680, 0, 2228274, 327680, 0, 2293810, 327680, 0, 2359346, 327680, 0, 2424882, 327680, 0, 2490418, 327680, 0, 2555954, 327680, 0, 2621490, 327680, 0, 1769523, 327680, 0, 1835059, 327680, 0, 1900595, 327680, 0, 1966131, 327680, 0, 2031667, 327680, 0, 2097203, 327680, 0, 2162739, 327680, 0, 2228275, 327680, 0, 2293811, 327680, 0, 2359347, 327680, 0, 2424883, 327680, 0, 2490419, 327680, 0, 2555955, 327680, 0, 2621491, 327680, 0, 1769524, 327680, 0, 1835060, 327680, 0, 1900596, 327680, 0, 1966132, 327680, 0, 2031668, 327680, 0, 2097204, 327680, 0, 2162740, 327680, 0, 2228276, 327680, 0, 2293812, 327680, 0, 2359348, 327680, 0, 2424884, 327680, 0, 2490420, 327680, 0, 2555956, 327680, 0, 2621492, 327680, 0, 1769525, 327680, 0, 1835061, 327680, 0, 1900597, 327680, 0, 1966133, 327680, 0, 2031669, 327680, 0, 2097205, 327680, 0, 2162741, 327680, 0, 2228277, 327680, 0, 2293813, 327680, 0, 2359349, 327680, 0, 2424885, 327680, 0, 2490421, 327680, 0, 2555957, 327680, 0, 2621493, 327680, 0, 1769526, 327680, 0, 1835062, 327680, 0, 1900598, 327680, 0, 1966134, 327680, 0, 2031670, 327680, 0, 2097206, 327680, 0, 2162742, 327680, 0, 2228278, 327680, 0, 2293814, 327680, 0, 2359350, 327680, 0, 2424886, 327680, 0, 2490422, 327680, 0, 2555958, 327680, 0, 2621494, 327680, 0, 1769527, 327680, 0, 1835063, 327680, 0, 1900599, 327680, 0, 1966135, 327680, 0, 2031671, 327680, 0, 2097207, 327680, 0, 2162743, 327680, 0, 2228279, 327680, 0, 2293815, 327680, 0, 2359351, 327680, 0, 2424887, 327680, 0, 2490423, 327680, 0, 2555959, 327680, 0, 2621495, 327680, 0, 1769528, 327680, 0, 1835064, 327680, 0, 1900600, 327680, 0, 1966136, 327680, 0, 2031672, 327680, 0, 2097208, 327680, 0, 2162744, 327680, 0, 2228280, 327680, 0, 2293816, 327680, 0, 2359352, 327680, 0, 2424888, 327680, 0, 2490424, 327680, 0, 2555960, 327680, 0, 2621496, 327680, 0, 1769529, 327680, 0, 1835065, 327680, 0, 1900601, 327680, 0, 1966137, 327680, 0, 2031673, 327680, 0, 2097209, 327680, 0, 2162745, 327680, 0, 2228281, 327680, 0, 2293817, 327680, 0, 2359353, 327680, 0, 2424889, 327680, 0, 2490425, 327680, 0, 2555961, 327680, 0, 2621497, 327680, 0, 1769530, 327680, 0, 1835066, 327680, 0, 1900602, 327680, 0, 1966138, 327680, 0, 2031674, 327680, 0, 2097210, 327680, 0, 2162746, 327680, 0, 2228282, 327680, 0, 2293818, 327680, 0, 2359354, 327680, 0, 2424890, 327680, 0, 2490426, 327680, 0, 2555962, 327680, 0, 2621498, 327680, 0, 1769531, 327680, 0, 1835067, 327680, 0, 1900603, 327680, 0, 1966139, 327680, 0, 2031675, 327680, 0, 2097211, 327680, 0, 2162747, 327680, 0, 2228283, 327680, 0, 2293819, 327680, 0, 2359355, 327680, 0, 2424891, 327680, 0, 2490427, 327680, 0, 2555963, 327680, 0, 2621499, 327680, 0, 1769532, 327680, 0, 1835068, 327680, 0, 1900604, 327680, 0, 1966140, 327680, 0, 2031676, 327680, 0, 2097212, 327680, 0, 2162748, 327680, 0, 2228284, 327680, 0, 2293820, 327680, 0, 2359356, 327680, 0, 2424892, 327680, 0, 2490428, 327680, 0, 2555964, 327680, 0, 2621500, 327680, 0, 1769533, 327680, 0, 1835069, 327680, 0, 1900605, 327680, 0, 1966141, 327680, 0, 2031677, 327680, 0, 2097213, 327680, 0, 2162749, 327680, 0, 2228285, 327680, 0, 2293821, 327680, 0, 2359357, 327680, 0, 2424893, 327680, 0, 2490429, 327680, 0, 2555965, 327680, 0, 2621501, 327680, 0, 1769534, 327680, 0, 1835070, 327680, 0, 1900606, 327680, 0, 1966142, 327680, 0, 2031678, 327680, 0, 2097214, 327680, 0, 2162750, 327680, 0, 2228286, 327680, 0, 2293822, 327680, 0, 2359358, 327680, 0, 2424894, 327680, 0, 2490430, 327680, 0, 2555966, 327680, 0, 2621502, 327680, 0, 1769535, 327680, 0, 1835071, 327680, 0, 1900607, 327680, 0, 1966143, 327680, 0, 2031679, 327680, 0, 2097215, 327680, 0, 2162751, 327680, 0, 2228287, 327680, 0, 2293823, 327680, 0, 2359359, 327680, 0, 2424895, 327680, 0, 2490431, 327680, 0, 2555967, 327680, 0, 2621503, 327680, 0, 1769536, 327680, 0, 1835072, 327680, 0, 1900608, 327680, 0, 1966144, 327680, 0, 2031680, 327680, 0, 2097216, 327680, 0, 2162752, 327680, 0, 2228288, 327680, 0, 2293824, 327680, 0, 2359360, 327680, 0, 2424896, 327680, 0, 2490432, 327680, 0, 2555968, 327680, 0, 2621504, 327680, 0, 1769537, 327680, 0, 1835073, 327680, 0, 1900609, 327680, 0, 1966145, 327680, 0, 2031681, 327680, 0, 2097217, 327680, 0, 2162753, 327680, 0, 2228289, 327680, 0, 2293825, 327680, 0, 2359361, 327680, 0, 2424897, 327680, 0, 2490433, 327680, 0, 2555969, 327680, 0, 2621505, 327680, 0, 1769538, 327680, 0, 1835074, 327680, 0, 1900610, 327680, 0, 1966146, 327680, 0, 2031682, 327680, 0, 2097218, 327680, 0, 2162754, 327680, 0, 2228290, 327680, 0, 2293826, 327680, 0, 2359362, 327680, 0, 2424898, 327680, 0, 2490434, 327680, 0, 2555970, 327680, 0, 2621506, 327680, 0, 1769539, 327680, 0, 1835075, 327680, 0, 1900611, 327680, 0, 1966147, 327680, 0, 2031683, 327680, 0, 2097219, 327680, 0, 2162755, 327680, 0, 2228291, 327680, 0, 2293827, 327680, 0, 2359363, 327680, 0, 2424899, 327680, 0, 2490435, 327680, 0, 2555971, 327680, 0, 2621507, 327680, 0, 1769540, 327680, 0, 1835076, 327680, 0, 1900612, 327680, 0, 1966148, 327680, 0, 2031684, 327680, 0, 2097220, 327680, 0, 2162756, 327680, 0, 2228292, 327680, 0, 2293828, 327680, 0, 2359364, 327680, 0, 2424900, 327680, 0, 2490436, 327680, 0, 2555972, 327680, 0, 2621508, 327680, 0, 1769541, 327680, 0, 1835077, 327680, 0, 1900613, 327680, 0, 1966149, 327680, 0, 2031685, 327680, 0, 2097221, 327680, 0, 2162757, 327680, 0, 2228293, 327680, 0, 2293829, 327680, 0, 2359365, 327680, 0, 2424901, 327680, 0, 2490437, 327680, 0, 2555973, 327680, 0, 2621509, 327680, 0, 1769542, 327680, 0, 1835078, 327680, 0, 1900614, 327680, 0, 1966150, 327680, 0, 2031686, 327680, 0, 2097222, 327680, 0, 2162758, 327680, 0, 2228294, 327680, 0, 2293830, 327680, 0, 2359366, 327680, 0, 2424902, 327680, 0, 2490438, 327680, 0, 2555974, 327680, 0, 2621510, 327680, 0, 1769543, 327680, 0, 1835079, 327680, 0, 1900615, 327680, 0, 1966151, 327680, 0, 2031687, 327680, 0, 2097223, 327680, 0, 2162759, 327680, 0, 2228295, 327680, 0, 2293831, 327680, 0, 2359367, 327680, 0, 2424903, 327680, 0, 2490439, 327680, 0, 2555975, 327680, 0, 2621511, 327680, 0, 1769544, 327680, 0, 1835080, 327680, 0, 1900616, 327680, 0, 1966152, 327680, 0, 2031688, 327680, 0, 2097224, 327680, 0, 2162760, 327680, 0, 2228296, 327680, 0, 2293832, 327680, 0, 2359368, 327680, 0, 2424904, 327680, 0, 2490440, 327680, 0, 2555976, 327680, 0, 2621512, 327680, 0, 65535, 458752, 2, 131071, 458752, 2, 196607, 458752, 2, 262143, 458752, 2, 327679, 458752, 2, 393215, 458752, 2, 458751, 458752, 2, 524287, 458752, 2, 589823, 458752, 2, 655359, 458752, 2, 720895, 458752, 2, 786431, 458752, 2, 851967, 458752, 2, 917503, 458752, 2, 983039, 458752, 2, 1048575, 458752, 2, 1114111, 458752, 2, 1179647, 458752, 2, 1245183, 458752, 2, 1310719, 458752, 2, 1376255, 458752, 2, 1441791, 458752, 2, 1507327, 458752, 2, 1572863, 458752, 2, 1638399, 458752, 2, 1703935, 458752, 2, 72, 458752, 2, 65608, 458752, 2, 131144, 458752, 2, 196680, 458752, 2, 262216, 458752, 2, 327752, 458752, 2, 393288, 458752, 2, 458824, 458752, 2, 524360, 458752, 2, 589896, 458752, 2, 655432, 458752, 2, 720968, 458752, 2, 786504, 458752, 2, 852040, 458752, 2, 917576, 458752, 2, 983112, 458752, 2, 1048648, 458752, 2, 1114184, 458752, 2, 1179720, 458752, 2, 1245256, 458752, 2, 1310792, 458752, 2, 1376328, 458752, 2, 1441864, 458752, 2, 1507400, 458752, 2, 1572936, 458752, 2, 1638472, 458752, 2, 0, 458752, 2, 1, 458752, 2, 2, 458752, 2, 3, 458752, 2, 4, 458752, 2, 5, 458752, 2, 6, 458752, 2, 7, 458752, 2, 8, 458752, 2, 9, 458752, 2, 10, 458752, 2, 11, 458752, 2, 12, 458752, 2, 13, 458752, 2, 14, 458752, 2, 15, 458752, 2, 16, 458752, 2, 17, 458752, 2, 18, 458752, 2, 19, 458752, 2, 20, 458752, 2, 21, 458752, 2, 22, 458752, 2, 23, 458752, 2, 24, 458752, 2, 25, 458752, 2, 26, 458752, 2, 27, 458752, 2, 28, 458752, 2, 29, 458752, 2, 30, 458752, 2, 31, 458752, 2, 32, 458752, 2, 33, 458752, 2, 34, 458752, 2, 35, 458752, 2, 36, 458752, 2, 37, 458752, 2, 38, 458752, 2, 39, 458752, 2, 40, 458752, 2, 41, 458752, 2, 42, 458752, 2, 43, 458752, 2, 44, 458752, 2, 45, 458752, 2, 46, 458752, 2, 47, 458752, 2, 48, 458752, 2, 49, 458752, 2, 50, 458752, 2, 51, 458752, 2, 52, 458752, 2, 53, 458752, 2, 54, 458752, 2, 55, 458752, 2, 56, 458752, 2, 57, 458752, 2, 58, 458752, 2, 59, 458752, 2, 60, 458752, 2, 61, 458752, 2, 62, 458752, 2, 63, 458752, 2, 64, 458752, 2, 65, 458752, 2, 66, 458752, 2, 67, 458752, 2, 68, 458752, 2, 69, 458752, 2, 70, 458752, 2, 71, 458752, 2, 65566, 458752, 2, 131102, 458752, 2, 196638, 458752, 2, 262174, 458752, 2, 327710, 458752, 2, 327719, 458752, 2, 262183, 458752, 2, 196647, 458752, 2, 131111, 458752, 2, 65575, 458752, 2, 393246, 458752, 2, 458782, 458752, 2, 524318, 458752, 2, 393255, 458752, 2, 458791, 458752, 2, 524327, 458752, 2, 524319, 458752, 2, 524320, 458752, 2, 524321, 458752, 2, 524326, 458752, 2, 524325, 458752, 2, 524324, 458752, 2, 589857, 458752, 2, 655393, 458752, 2, 720929, 458752, 2, 786465, 458752, 2, 852001, 458752, 2, 917537, 458752, 2, 983073, 458752, 2, 589860, 458752, 2, 655396, 458752, 2, 720932, 458752, 2, 786468, 458752, 2, 852004, 458752, 2, 917540, 458752, 2, 983076, 458752, 2, 1048609, 458752, 2, 1114145, 458752, 2, 1179681, 458752, 2, 1245217, 458752, 2, 1310753, 458752, 2, 1376289, 458752, 2, 1441825, 458752, 2, 1048612, 458752, 2, 1114148, 458752, 2, 1179684, 458752, 2, 1245220, 458752, 2, 1310756, 458752, 2, 1376292, 458752, 2, 1441828, 458752, 2, 1441815, 458752, 2, 1441816, 458752, 2, 1441817, 458752, 2, 1441818, 458752, 2, 1441819, 458752, 2, 1441820, 458752, 2, 1441821, 458752, 2, 1441822, 458752, 2, 1441823, 458752, 2, 1441824, 458752, 2, 1441814, 458752, 2, 1441812, 458752, 2, 1441813, 458752, 2, 1245204, 458752, 2, 1310740, 458752, 2, 1376276, 458752, 2, 1179667, 458752, 2, 1114130, 458752, 2, 1114122, 458752, 2, 1114123, 458752, 2, 1114124, 458752, 2, 1114125, 458752, 2, 1114126, 458752, 2, 1114127, 458752, 2, 1114128, 458752, 2, 1114129, 458752, 2, 1179657, 458752, 2, 1245192, 458752, 2, 1310728, 458752, 2, 1376264, 458752, 2, 1441800, 458752, 2, 1441795, 458752, 2, 1441796, 458752, 2, 1441797, 458752, 2, 1441798, 458752, 2, 1441799, 458752, 2, 1376259, 458752, 2, 1310724, 458752, 2, 1376260, 458752, 2, 1245189, 458752, 2, 1310725, 458752, 2, 1376261, 458752, 2, 1179654, 458752, 2, 1245190, 458752, 2, 1310726, 458752, 2, 1376262, 458752, 2, 1245191, 458752, 2, 1310727, 458752, 2, 1376263, 458752, 2, 1179655, 458752, 2, 1179656, 458752, 2, 1114119, 458752, 2, 1114120, 458752, 2, 1114121, 458752, 2, 851968, 458752, 2, 851969, 458752, 2, 851970, 458752, 2, 851971, 458752, 2, 851972, 458752, 2, 851973, 458752, 2, 851974, 458752, 2, 851975, 458752, 2, 851976, 458752, 2, 851977, 458752, 2, 851978, 458752, 2, 851979, 458752, 2, 1441794, 458752, 2, 786444, 458752, 2, 720909, 458752, 2, 655374, 458752, 2, 655375, 458752, 2, 655376, 458752, 2, 655377, 458752, 2, 720914, 458752, 2, 786451, 458752, 2, 786452, 458752, 2, 1245205, 458752, 2, 1245206, 458752, 2, 1245207, 458752, 2, 1245208, 458752, 2, 1310744, 458752, 2, 1310745, 458752, 2, 1310746, 458752, 2, 1310747, 458752, 2, 1376283, 458752, 2, 1376284, 458752, 2, 1245209, 458752, 2, 1245210, 458752, 2, 1245211, 458752, 2, 1245212, 458752, 2, 1310748, 458752, 2, 1310741, 458752, 2, 1310742, 458752, 2, 1310743, 458752, 2, 1376277, 458752, 2, 1376278, 458752, 2, 1376279, 458752, 2, 1376280, 458752, 2, 1376281, 458752, 2, 1376282, 458752, 2, 1048608, 458752, 2, 1048607, 458752, 2, 1048606, 458752, 2, 786456, 458752, 2, 786457, 458752, 2, 786458, 458752, 2, 786459, 458752, 2, 786460, 458752, 2, 393222, 458752, 2, 393223, 458752, 2, 393224, 458752, 2, 393225, 458752, 2, 327690, 458752, 2, 262155, 458752, 2, 262156, 458752, 2, 262157, 458752, 2, 262158, 458752, 2, 262159, 458752, 2, 262160, 458752, 2, 262161, 458752, 2, 262162, 458752, 2, 262163, 458752, 2, 262164, 458752, 2, 262165, 458752, 2, 262166, 458752, 2, 262167, 458752, 2, 262168, 458752, 2, 262169, 458752, 2, 262170, 458752, 2, 262171, 458752, 2, 65590, 458752, 2, 131126, 458752, 2, 196662, 458752, 2, 262198, 458752, 2, 262199, 458752, 2, 262200, 458752, 2, 262201, 458752, 2, 262202, 458752, 2, 262203, 458752, 2, 262204, 458752, 2, 262205, 458752, 2, 262206, 458752, 2, 262207, 458752, 2, 262208, 458752, 2, 262209, 458752, 2, 262210, 458752, 2, 262211, 458752, 2, 262212, 458752, 2, 262213, 458752, 2, 1441829, 458752, 2, 1441830, 458752, 2, 1441831, 458752, 2, 1441832, 458752, 2, 1441833, 458752, 2, 1441834, 458752, 2, 1441835, 458752, 2, 1441836, 458752, 2, 1441837, 458752, 2, 1441838, 458752, 2, 1441839, 458752, 2, 1441840, 458752, 2, 1441841, 458752, 2, 1441842, 458752, 2, 1441843, 458752, 2, 1441844, 458752, 2, 1441845, 458752, 2, 1441846, 458752, 2, 1441847, 458752, 2, 1441848, 458752, 2, 1441849, 458752, 2, 1441850, 458752, 2, 1441851, 458752, 2, 1441852, 458752, 2, 1441853, 458752, 2, 1441854, 458752, 2, 1441855, 458752, 2, 1441856, 458752, 2, 1441857, 458752, 2, 1441858, 458752, 2, 1441859, 458752, 2, 1441860, 458752, 2, 1179685, 458752, 2, 1179686, 458752, 2, 1179687, 458752, 2, 1179688, 458752, 2, 1179689, 458752, 2, 1179690, 458752, 2, 1179691, 458752, 2, 1179692, 458752, 2, 1179693, 458752, 2, 1179694, 458752, 2, 1179695, 458752, 2, 1179696, 458752, 2, 1179697, 458752, 2, 1179700, 458752, 2, 1179701, 458752, 2, 1179702, 458752, 2, 1179703, 458752, 2, 1179704, 458752, 2, 1179705, 458752, 2, 1179706, 458752, 2, 1179707, 458752, 2, 1179708, 458752, 2, 1179709, 458752, 2, 1179710, 458752, 2, 1179711, 458752, 2, 1179712, 458752, 2, 1179713, 458752, 2, 1179714, 458752, 2, 1179715, 458752, 2, 1179716, 458752, 2, 1179717, 458752, 2, 1179718, 458752, 2, 1179719, 458752, 2, 917553, 458752, 2, 917554, 458752, 2, 917555, 458752, 2, 917556, 458752, 2, 917557, 458752, 2, 917552, 458752, 2, 917543, 458752, 2, 917544, 458752, 2, 917545, 458752, 2, 917546, 458752, 2, 917547, 458752, 2, 917548, 458752, 2, 917549, 458752, 2, 589862, 458752, 2, 589861, 458752, 2, 917558, 458752, 2, 917559, 458752, 2, 917560, 458752, 2, 917561, 458752, 2, 917562, 458752, 2, 917563, 458752, 2, 917564, 458752, 2, 917567, 458752, 2, 917568, 458752, 2, 917569, 458752, 2, 917570, 458752, 2, 917571, 458752, 2, 917572, 458752, 2, 917573, 458752, 2, 917574, 458752, 2, 917575, 458752, 2, 589863, 458752, 2, 589864, 458752, 2, 589865, 458752, 2, 655401, 458752, 2, 720937, 458752, 2, 786473, 458752, 2, 852009, 458752, 2, 852012, 458752, 2, 786475, 458752, 2, 720938, 458752, 2, 786474, 458752, 2, 852010, 458752, 2, 852011, 458752, 2, 262184, 458752, 2, 262185, 458752, 2, 262186, 458752, 2, 524332, 458752, 2, 524333, 458752, 2, 524334, 458752, 2, 524335, 458752, 2, 458800, 458752, 2, 458801, 458752, 2, 262187, 458752, 2, 262188, 458752, 2, 262189, 458752, 2, 393265, 458752, 2, 327729, 458752, 2, 262193, 458752, 2, 262194, 458752, 2, 262195, 458752, 2, 524339, 458752, 2, 524340, 458752, 2, 524341, 458752, 2, 524342, 458752, 2, 524343, 458752, 2, 524344, 458752, 2, 524345, 458752, 2, 524346, 458752, 2, 524347, 458752, 2, 524348, 458752, 2, 524349, 458752, 2, 524350, 458752, 2, 524351, 458752, 2, 524352, 458752, 2, 524353, 458752, 2, 524354, 458752, 2, 524355, 458752, 2, 524356, 458752, 2, 524357, 458752, 2, 524358, 458752, 2, 524359, 458752, 2, 524338, 458752, 2, 524336, 458752, 2, 524337, 458752, 2, 852028, 458752, 2, 786492, 458752, 2, 720956, 458752, 2, 589884, 458752, 2, 655420, 458752, 2, 262172, 458752, 2, 262173, 458752, 2, 524288, 458752, 2, 524289, 458752, 2, 524290, 458752, 2)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_b4ay6")]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("3_og3ft")]
+position = Vector2(508, 37)
+
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(234, 347)
+
+[node name="Enemy2" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(199, 347)
+
+[node name="Enemy3" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(164, 347)
+
+[node name="Enemy4" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(153, 198)
+
+[node name="Enemy6" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(1132, 177)
+
+[node name="Enemy7" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(933, 216)
+
+[node name="Enemy8" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(840, 216)
+
+[node name="Enemy9" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(817, 123)
+
+[node name="Enemy5" parent="Mobs" instance=ExtResource("4_l0nai")]
+position = Vector2(279, 265)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HP" type="Label" parent="UI"]
+offset_left = 56.0
+offset_top = 35.0
+offset_right = 96.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "HP"
+script = SubResource("GDScript_cntrs")
+
+[node name="Gold" type="Label" parent="UI"]
+offset_left = 56.0
+offset_top = 72.0
+offset_right = 101.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+script = SubResource("GDScript_e5pvg")
+
+[node name="Stars" type="Label" parent="UI"]
+offset_left = 137.0
+offset_top = 34.0
+offset_right = 186.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Stars"
+script = SubResource("GDScript_x1j21")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Star" parent="Collectables" instance=ExtResource("4_qaj82")]
+position = Vector2(888, 39)
+
+[node name="Coin" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 26)
+
+[node name="Coin2" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 41)
+
+[node name="Coin3" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 56)
+
+[node name="Coin4" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 71)
+
+[node name="Coin5" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 86)
+
+[node name="Coin6" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 101)
+
+[node name="Coin7" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(617, 116)
+
+[node name="Coin8" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 26)
+
+[node name="Coin9" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 41)
+
+[node name="Coin10" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 56)
+
+[node name="Coin11" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 71)
+
+[node name="Coin12" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 86)
+
+[node name="Coin13" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 101)
+
+[node name="Coin14" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 116)
+
+[node name="Coin15" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 26)
+
+[node name="Coin16" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 41)
+
+[node name="Coin17" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 56)
+
+[node name="Coin18" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 71)
+
+[node name="Coin19" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 86)
+
+[node name="Coin20" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 101)
+
+[node name="Coin21" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(583, 116)
+
+[node name="Coin646" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 170)
+
+[node name="Coin647" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 185)
+
+[node name="Coin648" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 200)
+
+[node name="Coin649" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 215)
+
+[node name="Coin650" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 170)
+
+[node name="Coin651" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 185)
+
+[node name="Coin652" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 200)
+
+[node name="Coin653" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 215)
+
+[node name="Coin654" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 170)
+
+[node name="Coin655" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 185)
+
+[node name="Coin656" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 200)
+
+[node name="Coin657" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 215)
+
+[node name="Coin658" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 170)
+
+[node name="Coin659" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 185)
+
+[node name="Coin660" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 200)
+
+[node name="Coin661" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 215)
+
+[node name="Coin804" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 90)
+
+[node name="Coin805" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 105)
+
+[node name="Coin806" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 120)
+
+[node name="Coin834" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 135)
+
+[node name="Coin835" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 90)
+
+[node name="Coin836" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 105)
+
+[node name="Coin837" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 120)
+
+[node name="Coin838" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 135)
+
+[node name="Coin662" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 233)
+
+[node name="Coin663" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 248)
+
+[node name="Coin664" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 263)
+
+[node name="Coin665" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(615, 278)
+
+[node name="Coin666" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 233)
+
+[node name="Coin667" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 248)
+
+[node name="Coin668" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 263)
+
+[node name="Coin669" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(599, 278)
+
+[node name="Coin22" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 26)
+
+[node name="Coin23" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 41)
+
+[node name="Coin24" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 56)
+
+[node name="Coin25" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 71)
+
+[node name="Coin26" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 86)
+
+[node name="Coin27" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 101)
+
+[node name="Coin28" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(566, 116)
+
+[node name="Coin29" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 26)
+
+[node name="Coin30" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 41)
+
+[node name="Coin31" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 56)
+
+[node name="Coin32" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 71)
+
+[node name="Coin33" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 86)
+
+[node name="Coin34" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 101)
+
+[node name="Coin35" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(549, 116)
+
+[node name="Coin47" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 134)
+
+[node name="Coin48" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 149)
+
+[node name="Coin49" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 164)
+
+[node name="Coin50" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 179)
+
+[node name="Coin51" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 194)
+
+[node name="Coin52" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 209)
+
+[node name="Coin53" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 224)
+
+[node name="Coin54" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 134)
+
+[node name="Coin55" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 149)
+
+[node name="Coin56" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 164)
+
+[node name="Coin57" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 179)
+
+[node name="Coin58" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 194)
+
+[node name="Coin59" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 209)
+
+[node name="Coin60" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 224)
+
+[node name="Coin61" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 239)
+
+[node name="Coin62" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 254)
+
+[node name="Coin63" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 269)
+
+[node name="Coin64" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 284)
+
+[node name="Coin65" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 299)
+
+[node name="Coin66" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 314)
+
+[node name="Coin67" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 329)
+
+[node name="Coin68" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 239)
+
+[node name="Coin69" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 254)
+
+[node name="Coin70" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 269)
+
+[node name="Coin71" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 284)
+
+[node name="Coin72" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 299)
+
+[node name="Coin73" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 314)
+
+[node name="Coin74" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 329)
+
+[node name="Coin75" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 344)
+
+[node name="Coin76" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 359)
+
+[node name="Coin77" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 377)
+
+[node name="Coin78" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 392)
+
+[node name="Coin79" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(568, 407)
+
+[node name="Coin80" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 344)
+
+[node name="Coin81" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 359)
+
+[node name="Coin82" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 377)
+
+[node name="Coin83" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 392)
+
+[node name="Coin84" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(552, 407)
+
+[node name="Coin85" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(536, 377)
+
+[node name="Coin86" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(536, 392)
+
+[node name="Coin87" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(536, 407)
+
+[node name="Coin88" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 377)
+
+[node name="Coin89" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 392)
+
+[node name="Coin90" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 407)
+
+[node name="Coin127" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 312)
+
+[node name="Coin128" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 327)
+
+[node name="Coin129" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 342)
+
+[node name="Coin130" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 312)
+
+[node name="Coin131" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 327)
+
+[node name="Coin132" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 342)
+
+[node name="Coin133" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 312)
+
+[node name="Coin134" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 327)
+
+[node name="Coin135" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 342)
+
+[node name="Coin136" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 312)
+
+[node name="Coin137" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 327)
+
+[node name="Coin445" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 281)
+
+[node name="Coin446" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(520, 296)
+
+[node name="Coin447" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 281)
+
+[node name="Coin448" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 296)
+
+[node name="Coin449" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 281)
+
+[node name="Coin450" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 296)
+
+[node name="Coin451" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 281)
+
+[node name="Coin452" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 296)
+
+[node name="Coin453" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 281)
+
+[node name="Coin454" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 296)
+
+[node name="Coin455" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 281)
+
+[node name="Coin456" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 296)
+
+[node name="Coin457" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 281)
+
+[node name="Coin458" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 296)
+
+[node name="Coin459" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 281)
+
+[node name="Coin460" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 296)
+
+[node name="Coin461" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 281)
+
+[node name="Coin462" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 296)
+
+[node name="Coin463" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 281)
+
+[node name="Coin464" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 296)
+
+[node name="Coin465" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 281)
+
+[node name="Coin466" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 296)
+
+[node name="Coin467" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 281)
+
+[node name="Coin468" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 296)
+
+[node name="Coin469" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 281)
+
+[node name="Coin471" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(448, 184)
+
+[node name="Coin472" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(432, 184)
+
+[node name="Coin473" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(416, 184)
+
+[node name="Coin474" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(400, 184)
+
+[node name="Coin475" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(280, 150)
+
+[node name="Coin476" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(264, 150)
+
+[node name="Coin477" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(248, 150)
+
+[node name="Coin478" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(232, 150)
+
+[node name="Coin470" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 296)
+
+[node name="Coin138" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 342)
+
+[node name="Coin91" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 377)
+
+[node name="Coin92" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 392)
+
+[node name="Coin93" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(504, 407)
+
+[node name="Coin94" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 377)
+
+[node name="Coin95" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 392)
+
+[node name="Coin96" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(488, 407)
+
+[node name="Coin97" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 377)
+
+[node name="Coin98" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 392)
+
+[node name="Coin99" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 407)
+
+[node name="Coin100" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 377)
+
+[node name="Coin101" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 392)
+
+[node name="Coin102" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 407)
+
+[node name="Coin103" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 377)
+
+[node name="Coin104" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 392)
+
+[node name="Coin105" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 407)
+
+[node name="Coin106" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 377)
+
+[node name="Coin107" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 392)
+
+[node name="Coin108" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 407)
+
+[node name="Coin109" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 377)
+
+[node name="Coin110" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 392)
+
+[node name="Coin111" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 407)
+
+[node name="Coin112" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 377)
+
+[node name="Coin113" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 392)
+
+[node name="Coin114" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 407)
+
+[node name="Coin115" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 377)
+
+[node name="Coin116" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 392)
+
+[node name="Coin117" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 407)
+
+[node name="Coin118" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 377)
+
+[node name="Coin119" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 392)
+
+[node name="Coin120" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 407)
+
+[node name="Coin121" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 377)
+
+[node name="Coin122" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 392)
+
+[node name="Coin123" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 407)
+
+[node name="Coin124" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 377)
+
+[node name="Coin125" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 392)
+
+[node name="Coin126" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 407)
+
+[node name="Coin497" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 25)
+
+[node name="Coin498" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 40)
+
+[node name="Coin499" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(408, 55)
+
+[node name="Coin500" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 25)
+
+[node name="Coin501" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 40)
+
+[node name="Coin502" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(392, 55)
+
+[node name="Coin503" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 25)
+
+[node name="Coin504" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 40)
+
+[node name="Coin505" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(376, 55)
+
+[node name="Coin539" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 25)
+
+[node name="Coin540" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 40)
+
+[node name="Coin541" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(456, 55)
+
+[node name="Coin548" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 25)
+
+[node name="Coin549" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 40)
+
+[node name="Coin550" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(472, 55)
+
+[node name="Coin542" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 25)
+
+[node name="Coin543" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 40)
+
+[node name="Coin544" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(440, 55)
+
+[node name="Coin545" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 25)
+
+[node name="Coin546" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 40)
+
+[node name="Coin547" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(424, 55)
+
+[node name="Coin506" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 25)
+
+[node name="Coin507" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 40)
+
+[node name="Coin508" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(360, 55)
+
+[node name="Coin509" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 25)
+
+[node name="Coin510" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 40)
+
+[node name="Coin511" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(344, 55)
+
+[node name="Coin512" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 25)
+
+[node name="Coin513" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 40)
+
+[node name="Coin514" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(328, 55)
+
+[node name="Coin515" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(312, 25)
+
+[node name="Coin516" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(312, 40)
+
+[node name="Coin517" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(312, 55)
+
+[node name="Coin518" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(296, 25)
+
+[node name="Coin519" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(296, 40)
+
+[node name="Coin520" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(296, 55)
+
+[node name="Coin521" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(280, 25)
+
+[node name="Coin522" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(280, 40)
+
+[node name="Coin523" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(280, 55)
+
+[node name="Coin524" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(264, 25)
+
+[node name="Coin525" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(264, 40)
+
+[node name="Coin526" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(264, 55)
+
+[node name="Coin527" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(248, 25)
+
+[node name="Coin528" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(248, 40)
+
+[node name="Coin529" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(248, 55)
+
+[node name="Coin530" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(232, 25)
+
+[node name="Coin531" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(232, 40)
+
+[node name="Coin532" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(232, 55)
+
+[node name="Coin533" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(216, 25)
+
+[node name="Coin534" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(216, 40)
+
+[node name="Coin535" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(216, 55)
+
+[node name="Coin536" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(200, 25)
+
+[node name="Coin537" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(200, 40)
+
+[node name="Coin538" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(200, 55)
+
+[node name="Coin355" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(136, 377)
+
+[node name="Coin356" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(136, 392)
+
+[node name="Coin357" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(136, 407)
+
+[node name="Coin358" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(120, 377)
+
+[node name="Coin359" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(120, 392)
+
+[node name="Coin360" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(120, 407)
+
+[node name="Coin361" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 377)
+
+[node name="Coin362" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 392)
+
+[node name="Coin363" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 407)
+
+[node name="Coin364" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 377)
+
+[node name="Coin365" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 392)
+
+[node name="Coin366" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 407)
+
+[node name="Coin367" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 377)
+
+[node name="Coin368" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 392)
+
+[node name="Coin369" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 407)
+
+[node name="Coin370" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 377)
+
+[node name="Coin371" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 392)
+
+[node name="Coin372" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 407)
+
+[node name="Coin373" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 377)
+
+[node name="Coin374" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 392)
+
+[node name="Coin375" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 407)
+
+[node name="Coin376" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 377)
+
+[node name="Coin377" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 392)
+
+[node name="Coin378" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 407)
+
+[node name="Coin379" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 377)
+
+[node name="Coin380" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 392)
+
+[node name="Coin381" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 407)
+
+[node name="Coin382" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 329)
+
+[node name="Coin383" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 345)
+
+[node name="Coin388" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 329)
+
+[node name="Coin390" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 329)
+
+[node name="Coin389" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 345)
+
+[node name="Coin384" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 361)
+
+[node name="Coin385" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 329)
+
+[node name="Coin391" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 312)
+
+[node name="Coin392" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 312)
+
+[node name="Coin393" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 312)
+
+[node name="Coin395" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 312)
+
+[node name="Coin394" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 312)
+
+[node name="Coin396" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 296)
+
+[node name="Coin397" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 296)
+
+[node name="Coin398" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 296)
+
+[node name="Coin399" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 296)
+
+[node name="Coin401" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 296)
+
+[node name="Coin400" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 296)
+
+[node name="Coin402" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 280)
+
+[node name="Coin403" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 280)
+
+[node name="Coin404" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 280)
+
+[node name="Coin405" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 280)
+
+[node name="Coin406" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 280)
+
+[node name="Coin408" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 280)
+
+[node name="Coin407" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 280)
+
+[node name="Coin409" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 264)
+
+[node name="Coin410" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 264)
+
+[node name="Coin411" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 264)
+
+[node name="Coin412" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 264)
+
+[node name="Coin413" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 264)
+
+[node name="Coin414" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 264)
+
+[node name="Coin415" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 264)
+
+[node name="Coin416" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 248)
+
+[node name="Coin417" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 248)
+
+[node name="Coin418" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 248)
+
+[node name="Coin419" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 248)
+
+[node name="Coin420" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 248)
+
+[node name="Coin421" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 248)
+
+[node name="Coin422" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 248)
+
+[node name="Coin423" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 232)
+
+[node name="Coin424" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 232)
+
+[node name="Coin425" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(56, 232)
+
+[node name="Coin426" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(72, 232)
+
+[node name="Coin427" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(88, 232)
+
+[node name="Coin428" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(104, 232)
+
+[node name="Coin430" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(120, 264)
+
+[node name="Coin431" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(136, 264)
+
+[node name="Coin432" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(152, 264)
+
+[node name="Coin433" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(168, 264)
+
+[node name="Coin434" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(120, 248)
+
+[node name="Coin435" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(136, 248)
+
+[node name="Coin436" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(152, 248)
+
+[node name="Coin437" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(168, 248)
+
+[node name="Coin438" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(120, 232)
+
+[node name="Coin439" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(136, 232)
+
+[node name="Coin440" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(152, 232)
+
+[node name="Coin441" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(168, 232)
+
+[node name="Coin442" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(184, 264)
+
+[node name="Coin443" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(184, 248)
+
+[node name="Coin444" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(184, 232)
+
+[node name="Coin429" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 232)
+
+[node name="Coin479" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 103)
+
+[node name="Coin480" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 103)
+
+[node name="Coin481" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 103)
+
+[node name="Coin839" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 119)
+
+[node name="Coin840" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 119)
+
+[node name="Coin841" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 119)
+
+[node name="Coin482" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 87)
+
+[node name="Coin483" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 87)
+
+[node name="Coin484" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 87)
+
+[node name="Coin485" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 71)
+
+[node name="Coin486" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 71)
+
+[node name="Coin487" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 71)
+
+[node name="Coin488" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 55)
+
+[node name="Coin489" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 55)
+
+[node name="Coin490" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 55)
+
+[node name="Coin491" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 39)
+
+[node name="Coin492" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 39)
+
+[node name="Coin493" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 39)
+
+[node name="Coin494" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(24, 23)
+
+[node name="Coin495" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(40, 23)
+
+[node name="Coin496" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 23)
+
+[node name="Coin386" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 345)
+
+[node name="Coin387" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(8, 361)
+
+[node name="Coin139" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(824, 377)
+
+[node name="Coin140" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(824, 392)
+
+[node name="Coin141" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(824, 407)
+
+[node name="Coin142" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(808, 377)
+
+[node name="Coin143" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(808, 392)
+
+[node name="Coin144" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(808, 407)
+
+[node name="Coin145" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 377)
+
+[node name="Coin146" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 392)
+
+[node name="Coin147" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 407)
+
+[node name="Coin148" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 377)
+
+[node name="Coin149" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 392)
+
+[node name="Coin150" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 407)
+
+[node name="Coin151" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 377)
+
+[node name="Coin152" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 392)
+
+[node name="Coin153" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 407)
+
+[node name="Coin154" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 377)
+
+[node name="Coin155" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 392)
+
+[node name="Coin156" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 407)
+
+[node name="Coin157" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 377)
+
+[node name="Coin158" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 392)
+
+[node name="Coin159" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 407)
+
+[node name="Coin160" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 377)
+
+[node name="Coin161" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 392)
+
+[node name="Coin162" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 407)
+
+[node name="Coin163" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 377)
+
+[node name="Coin164" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 392)
+
+[node name="Coin165" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 407)
+
+[node name="Coin166" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 377)
+
+[node name="Coin167" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 392)
+
+[node name="Coin168" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 407)
+
+[node name="Coin169" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 377)
+
+[node name="Coin170" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 392)
+
+[node name="Coin171" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 407)
+
+[node name="Coin172" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 377)
+
+[node name="Coin173" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 392)
+
+[node name="Coin174" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 407)
+
+[node name="Coin175" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 377)
+
+[node name="Coin176" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 392)
+
+[node name="Coin177" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 407)
+
+[node name="Coin178" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(616, 377)
+
+[node name="Coin179" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(616, 392)
+
+[node name="Coin180" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(616, 407)
+
+[node name="Coin181" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 377)
+
+[node name="Coin182" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 392)
+
+[node name="Coin183" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 407)
+
+[node name="Coin184" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(584, 377)
+
+[node name="Coin185" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(584, 392)
+
+[node name="Coin186" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(584, 407)
+
+[node name="Coin187" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 377)
+
+[node name="Coin188" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 392)
+
+[node name="Coin189" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 407)
+
+[node name="Coin190" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 377)
+
+[node name="Coin191" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 392)
+
+[node name="Coin192" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 407)
+
+[node name="Coin193" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 377)
+
+[node name="Coin194" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 392)
+
+[node name="Coin195" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 407)
+
+[node name="Coin235" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 377)
+
+[node name="Coin236" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 392)
+
+[node name="Coin237" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 407)
+
+[node name="Coin244" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 377)
+
+[node name="Coin245" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 392)
+
+[node name="Coin246" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 407)
+
+[node name="Coin238" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 377)
+
+[node name="Coin239" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 392)
+
+[node name="Coin240" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 407)
+
+[node name="Coin247" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 328)
+
+[node name="Coin248" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 343)
+
+[node name="Coin249" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 361)
+
+[node name="Coin250" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 328)
+
+[node name="Coin251" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 343)
+
+[node name="Coin252" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 361)
+
+[node name="Coin253" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 328)
+
+[node name="Coin256" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 312)
+
+[node name="Coin257" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 312)
+
+[node name="Coin258" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 312)
+
+[node name="Coin254" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 343)
+
+[node name="Coin259" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 328)
+
+[node name="Coin260" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 343)
+
+[node name="Coin261" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 328)
+
+[node name="Coin262" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 343)
+
+[node name="Coin263" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 328)
+
+[node name="Coin264" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 312)
+
+[node name="Coin265" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 312)
+
+[node name="Coin266" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 312)
+
+[node name="Coin267" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 343)
+
+[node name="Coin268" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 328)
+
+[node name="Coin269" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 343)
+
+[node name="Coin270" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 328)
+
+[node name="Coin271" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 343)
+
+[node name="Coin272" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 328)
+
+[node name="Coin273" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 312)
+
+[node name="Coin274" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 312)
+
+[node name="Coin275" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 312)
+
+[node name="Coin276" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 343)
+
+[node name="Coin277" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 328)
+
+[node name="Coin278" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 343)
+
+[node name="Coin279" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 328)
+
+[node name="Coin280" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 343)
+
+[node name="Coin281" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 328)
+
+[node name="Coin282" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 312)
+
+[node name="Coin283" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 312)
+
+[node name="Coin284" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 312)
+
+[node name="Coin285" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 343)
+
+[node name="Coin286" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 328)
+
+[node name="Coin287" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 343)
+
+[node name="Coin288" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 328)
+
+[node name="Coin289" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 343)
+
+[node name="Coin290" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 328)
+
+[node name="Coin291" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 312)
+
+[node name="Coin292" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 312)
+
+[node name="Coin293" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 312)
+
+[node name="Coin294" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 343)
+
+[node name="Coin295" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 328)
+
+[node name="Coin296" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 343)
+
+[node name="Coin297" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 328)
+
+[node name="Coin298" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 343)
+
+[node name="Coin299" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 328)
+
+[node name="Coin300" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 312)
+
+[node name="Coin301" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 312)
+
+[node name="Coin302" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 312)
+
+[node name="Coin303" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 343)
+
+[node name="Coin304" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 328)
+
+[node name="Coin305" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 343)
+
+[node name="Coin306" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 328)
+
+[node name="Coin307" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 343)
+
+[node name="Coin308" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(824, 328)
+
+[node name="Coin309" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 312)
+
+[node name="Coin310" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 312)
+
+[node name="Coin551" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 265)
+
+[node name="Coin552" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 280)
+
+[node name="Coin553" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 265)
+
+[node name="Coin554" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 280)
+
+[node name="Coin555" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 265)
+
+[node name="Coin556" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 249)
+
+[node name="Coin557" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 249)
+
+[node name="Coin558" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 249)
+
+[node name="Coin559" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 280)
+
+[node name="Coin560" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 265)
+
+[node name="Coin561" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 280)
+
+[node name="Coin562" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 265)
+
+[node name="Coin563" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 280)
+
+[node name="Coin564" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 265)
+
+[node name="Coin565" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 249)
+
+[node name="Coin566" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 249)
+
+[node name="Coin567" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 249)
+
+[node name="Coin568" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 280)
+
+[node name="Coin569" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 265)
+
+[node name="Coin570" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 280)
+
+[node name="Coin571" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 265)
+
+[node name="Coin572" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 280)
+
+[node name="Coin573" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 265)
+
+[node name="Coin574" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 249)
+
+[node name="Coin575" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 249)
+
+[node name="Coin576" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 249)
+
+[node name="Coin577" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 280)
+
+[node name="Coin611" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 201)
+
+[node name="Coin612" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 216)
+
+[node name="Coin613" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 201)
+
+[node name="Coin614" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 216)
+
+[node name="Coin615" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 201)
+
+[node name="Coin616" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 185)
+
+[node name="Coin617" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 185)
+
+[node name="Coin618" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 185)
+
+[node name="Coin619" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 216)
+
+[node name="Coin620" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 201)
+
+[node name="Coin621" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 216)
+
+[node name="Coin622" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 201)
+
+[node name="Coin623" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 216)
+
+[node name="Coin624" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 201)
+
+[node name="Coin625" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 185)
+
+[node name="Coin626" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 185)
+
+[node name="Coin627" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 185)
+
+[node name="Coin628" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 216)
+
+[node name="Coin629" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 201)
+
+[node name="Coin630" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 216)
+
+[node name="Coin631" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 201)
+
+[node name="Coin632" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 216)
+
+[node name="Coin633" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 201)
+
+[node name="Coin634" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 185)
+
+[node name="Coin635" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 185)
+
+[node name="Coin636" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 185)
+
+[node name="Coin637" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 216)
+
+[node name="Coin578" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 265)
+
+[node name="Coin579" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 280)
+
+[node name="Coin580" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 265)
+
+[node name="Coin581" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 280)
+
+[node name="Coin582" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 265)
+
+[node name="Coin583" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 249)
+
+[node name="Coin584" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 249)
+
+[node name="Coin638" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 201)
+
+[node name="Coin639" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 216)
+
+[node name="Coin640" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 201)
+
+[node name="Coin641" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 216)
+
+[node name="Coin644" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 232)
+
+[node name="Coin645" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 232)
+
+[node name="Coin642" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 185)
+
+[node name="Coin643" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 185)
+
+[node name="Coin585" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 249)
+
+[node name="Coin586" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 280)
+
+[node name="Coin587" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 265)
+
+[node name="Coin588" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 280)
+
+[node name="Coin589" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 265)
+
+[node name="Coin590" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 280)
+
+[node name="Coin591" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 265)
+
+[node name="Coin592" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 249)
+
+[node name="Coin593" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 249)
+
+[node name="Coin594" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 249)
+
+[node name="Coin595" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 280)
+
+[node name="Coin596" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 265)
+
+[node name="Coin597" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 280)
+
+[node name="Coin598" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 265)
+
+[node name="Coin599" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 280)
+
+[node name="Coin600" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 265)
+
+[node name="Coin601" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 249)
+
+[node name="Coin602" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 249)
+
+[node name="Coin603" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 249)
+
+[node name="Coin604" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 280)
+
+[node name="Coin605" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 265)
+
+[node name="Coin606" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 280)
+
+[node name="Coin607" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 265)
+
+[node name="Coin608" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 280)
+
+[node name="Coin609" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 249)
+
+[node name="Coin610" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 249)
+
+[node name="Coin670" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 265)
+
+[node name="Coin671" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 249)
+
+[node name="Coin672" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 280)
+
+[node name="Coin673" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 265)
+
+[node name="Coin674" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 280)
+
+[node name="Coin675" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 265)
+
+[node name="Coin676" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 280)
+
+[node name="Coin677" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 265)
+
+[node name="Coin678" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 249)
+
+[node name="Coin679" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 249)
+
+[node name="Coin680" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 249)
+
+[node name="Coin681" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 280)
+
+[node name="Coin682" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 265)
+
+[node name="Coin683" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 280)
+
+[node name="Coin684" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 265)
+
+[node name="Coin685" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 280)
+
+[node name="Coin686" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 265)
+
+[node name="Coin687" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 249)
+
+[node name="Coin688" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 249)
+
+[node name="Coin689" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 249)
+
+[node name="Coin690" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 280)
+
+[node name="Coin691" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 265)
+
+[node name="Coin692" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 280)
+
+[node name="Coin693" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 265)
+
+[node name="Coin694" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 280)
+
+[node name="Coin695" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 249)
+
+[node name="Coin696" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 249)
+
+[node name="Coin697" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 265)
+
+[node name="Coin698" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 280)
+
+[node name="Coin699" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 265)
+
+[node name="Coin700" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 280)
+
+[node name="Coin701" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 249)
+
+[node name="Coin702" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 249)
+
+[node name="Coin311" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(824, 312)
+
+[node name="Coin312" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(824, 343)
+
+[node name="Coin313" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 328)
+
+[node name="Coin314" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 343)
+
+[node name="Coin315" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(808, 328)
+
+[node name="Coin316" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(808, 343)
+
+[node name="Coin317" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 328)
+
+[node name="Coin318" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(792, 312)
+
+[node name="Coin319" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(808, 312)
+
+[node name="Coin320" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 312)
+
+[node name="Coin321" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(776, 343)
+
+[node name="Coin322" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 328)
+
+[node name="Coin323" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 343)
+
+[node name="Coin324" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 328)
+
+[node name="Coin325" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 343)
+
+[node name="Coin326" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 328)
+
+[node name="Coin327" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(744, 312)
+
+[node name="Coin328" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(760, 312)
+
+[node name="Coin329" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 312)
+
+[node name="Coin330" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(728, 343)
+
+[node name="Coin331" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 328)
+
+[node name="Coin332" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 343)
+
+[node name="Coin333" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 328)
+
+[node name="Coin334" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 343)
+
+[node name="Coin335" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 328)
+
+[node name="Coin336" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(696, 312)
+
+[node name="Coin337" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(712, 312)
+
+[node name="Coin338" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 312)
+
+[node name="Coin339" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(680, 343)
+
+[node name="Coin340" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 328)
+
+[node name="Coin341" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 343)
+
+[node name="Coin342" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 328)
+
+[node name="Coin343" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 343)
+
+[node name="Coin344" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 328)
+
+[node name="Coin345" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(648, 312)
+
+[node name="Coin346" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(664, 312)
+
+[node name="Coin347" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 312)
+
+[node name="Coin348" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(632, 343)
+
+[node name="Coin349" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(616, 328)
+
+[node name="Coin350" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(616, 343)
+
+[node name="Coin351" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 328)
+
+[node name="Coin352" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(616, 312)
+
+[node name="Coin353" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 312)
+
+[node name="Coin354" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(600, 343)
+
+[node name="Coin255" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 361)
+
+[node name="Coin241" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 377)
+
+[node name="Coin242" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 392)
+
+[node name="Coin243" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 407)
+
+[node name="Coin196" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 377)
+
+[node name="Coin197" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 392)
+
+[node name="Coin198" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 407)
+
+[node name="Coin199" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 377)
+
+[node name="Coin200" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 392)
+
+[node name="Coin201" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 407)
+
+[node name="Coin202" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 377)
+
+[node name="Coin203" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 392)
+
+[node name="Coin204" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 407)
+
+[node name="Coin205" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 377)
+
+[node name="Coin206" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 392)
+
+[node name="Coin207" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 407)
+
+[node name="Coin208" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 377)
+
+[node name="Coin209" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 392)
+
+[node name="Coin210" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 407)
+
+[node name="Coin211" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 377)
+
+[node name="Coin212" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 392)
+
+[node name="Coin213" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 407)
+
+[node name="Coin214" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 377)
+
+[node name="Coin215" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 392)
+
+[node name="Coin216" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 407)
+
+[node name="Coin217" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 377)
+
+[node name="Coin218" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 392)
+
+[node name="Coin219" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 407)
+
+[node name="Coin220" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 377)
+
+[node name="Coin221" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 392)
+
+[node name="Coin222" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 407)
+
+[node name="Coin223" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 377)
+
+[node name="Coin224" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 392)
+
+[node name="Coin225" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 407)
+
+[node name="Coin226" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 377)
+
+[node name="Coin227" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 392)
+
+[node name="Coin228" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 407)
+
+[node name="Coin703" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 89)
+
+[node name="Coin704" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 104)
+
+[node name="Coin705" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 119)
+
+[node name="Coin706" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 89)
+
+[node name="Coin707" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 104)
+
+[node name="Coin708" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 119)
+
+[node name="Coin709" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 89)
+
+[node name="Coin710" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 104)
+
+[node name="Coin711" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 119)
+
+[node name="Coin712" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 89)
+
+[node name="Coin713" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 104)
+
+[node name="Coin714" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 119)
+
+[node name="Coin715" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 89)
+
+[node name="Coin716" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 104)
+
+[node name="Coin717" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 119)
+
+[node name="Coin757" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 40)
+
+[node name="Coin758" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 55)
+
+[node name="Coin759" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 74)
+
+[node name="Coin760" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 40)
+
+[node name="Coin763" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1128, 24)
+
+[node name="Coin764" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 24)
+
+[node name="Coin761" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 55)
+
+[node name="Coin765" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 40)
+
+[node name="Coin766" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 55)
+
+[node name="Coin767" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 40)
+
+[node name="Coin768" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 24)
+
+[node name="Coin769" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 24)
+
+[node name="Coin770" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 55)
+
+[node name="Coin771" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 40)
+
+[node name="Coin772" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 55)
+
+[node name="Coin773" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 40)
+
+[node name="Coin774" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1064, 24)
+
+[node name="Coin775" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 24)
+
+[node name="Coin776" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1080, 55)
+
+[node name="Coin777" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 40)
+
+[node name="Coin778" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 55)
+
+[node name="Coin779" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 40)
+
+[node name="Coin780" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 24)
+
+[node name="Coin781" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 24)
+
+[node name="Coin782" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1048, 55)
+
+[node name="Coin783" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 40)
+
+[node name="Coin784" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 55)
+
+[node name="Coin785" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 40)
+
+[node name="Coin786" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 24)
+
+[node name="Coin787" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 24)
+
+[node name="Coin788" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 55)
+
+[node name="Coin789" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 40)
+
+[node name="Coin790" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 55)
+
+[node name="Coin791" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 40)
+
+[node name="Coin792" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 24)
+
+[node name="Coin793" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 24)
+
+[node name="Coin794" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 55)
+
+[node name="Coin795" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 40)
+
+[node name="Coin796" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 55)
+
+[node name="Coin797" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 24)
+
+[node name="Coin798" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 40)
+
+[node name="Coin799" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 55)
+
+[node name="Coin800" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 40)
+
+[node name="Coin801" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 24)
+
+[node name="Coin802" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 24)
+
+[node name="Coin803" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 55)
+
+[node name="Coin807" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(807, 40)
+
+[node name="Coin808" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(807, 55)
+
+[node name="Coin809" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(823, 40)
+
+[node name="Coin810" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(807, 24)
+
+[node name="Coin811" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(823, 24)
+
+[node name="Coin812" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(823, 55)
+
+[node name="Coin813" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(729, 40)
+
+[node name="Coin814" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(729, 55)
+
+[node name="Coin815" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(791, 40)
+
+[node name="Coin816" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(729, 24)
+
+[node name="Coin817" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(791, 24)
+
+[node name="Coin818" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(791, 55)
+
+[node name="Coin819" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(697, 40)
+
+[node name="Coin820" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(697, 55)
+
+[node name="Coin821" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(713, 40)
+
+[node name="Coin822" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(697, 24)
+
+[node name="Coin823" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(713, 24)
+
+[node name="Coin824" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(713, 55)
+
+[node name="Coin825" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(681, 40)
+
+[node name="Coin826" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(681, 55)
+
+[node name="Coin827" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(681, 24)
+
+[node name="Coin828" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 40)
+
+[node name="Coin829" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 55)
+
+[node name="Coin830" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(665, 40)
+
+[node name="Coin831" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(649, 24)
+
+[node name="Coin832" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(665, 24)
+
+[node name="Coin833" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(665, 55)
+
+[node name="Coin762" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1144, 74)
+
+[node name="Coin718" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 89)
+
+[node name="Coin719" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 104)
+
+[node name="Coin720" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1112, 119)
+
+[node name="Coin721" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 89)
+
+[node name="Coin722" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 104)
+
+[node name="Coin723" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1096, 119)
+
+[node name="Coin724" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 89)
+
+[node name="Coin725" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 104)
+
+[node name="Coin726" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1032, 119)
+
+[node name="Coin727" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 89)
+
+[node name="Coin728" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 104)
+
+[node name="Coin729" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1016, 119)
+
+[node name="Coin730" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 89)
+
+[node name="Coin731" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 104)
+
+[node name="Coin732" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(1000, 119)
+
+[node name="Coin733" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 89)
+
+[node name="Coin734" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 104)
+
+[node name="Coin735" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(984, 119)
+
+[node name="Coin736" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 89)
+
+[node name="Coin737" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 104)
+
+[node name="Coin738" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(968, 119)
+
+[node name="Coin739" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 89)
+
+[node name="Coin740" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 104)
+
+[node name="Coin741" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(952, 119)
+
+[node name="Coin742" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 89)
+
+[node name="Coin743" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 104)
+
+[node name="Coin744" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(936, 119)
+
+[node name="Coin745" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 89)
+
+[node name="Coin746" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 104)
+
+[node name="Coin747" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(920, 119)
+
+[node name="Coin748" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 89)
+
+[node name="Coin749" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 104)
+
+[node name="Coin750" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(904, 119)
+
+[node name="Coin751" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 89)
+
+[node name="Coin752" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 104)
+
+[node name="Coin753" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(888, 119)
+
+[node name="Coin754" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 89)
+
+[node name="Coin755" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 104)
+
+[node name="Coin756" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(872, 119)
+
+[node name="Coin229" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 377)
+
+[node name="Coin230" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 392)
+
+[node name="Coin231" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(856, 407)
+
+[node name="Coin232" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 377)
+
+[node name="Coin233" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 392)
+
+[node name="Coin234" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(840, 407)
+
+[node name="Coin36" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 26)
+
+[node name="Coin37" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 41)
+
+[node name="Coin38" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 56)
+
+[node name="Coin39" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 71)
+
+[node name="Coin40" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 86)
+
+[node name="Coin41" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 101)
+
+[node name="Coin42" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(532, 116)
+
+[node name="Coin43" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(515, 71)
+
+[node name="Coin44" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(515, 86)
+
+[node name="Coin45" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(515, 101)
+
+[node name="Coin46" parent="Collectables" instance=ExtResource("5_ipgrp")]
+position = Vector2(515, 116)

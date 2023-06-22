@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dposxtg2qvnsx"]
+
+[ext_resource type="Script" path="res://howToPlay.gd" id="1_oupc8"]
+[ext_resource type="PackedScene" uid="uid://dyb8nb5ojb54d" path="res://background.tscn" id="2_8naw4"]
+
+[node name="HowToPlay" type="Node2D"]
+script = ExtResource("1_oupc8")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_8naw4")]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 80.0
+offset_top = 62.0
+offset_right = 1001.0
+offset_bottom = 524.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 924.0
+offset_bottom = 30.0
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 38.0
+offset_right = 909.0
+offset_bottom = 461.0
+text = "MOVE with the left and right arrow keys.
+
+JUMP with the space bar.
+
+CLIMB with the up and down arrow keys.
+
+Grab coins, avoid enemies, and get to the end of the level to win!
+
+Good luck!"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 550.0
+offset_top = 479.0
+offset_right = 740.0
+offset_bottom = 521.0
+text = "Play"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 333.0
+offset_top = 479.0
+offset_right = 523.0
+offset_bottom = 521.0
+text = "Go Back"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

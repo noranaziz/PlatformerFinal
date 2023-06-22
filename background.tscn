@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyb8nb5ojb54d"]
+
+[ext_resource type="Texture2D" uid="uid://d3jpwjmq2a5ty" path="res://bluemoon.png" id="1_phrih"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Bluemoon" type="Sprite2D" parent="."]
+position = Vector2(580.5, 327)
+scale = Vector2(0.604373, 0.607407)
+texture = ExtResource("1_phrih")

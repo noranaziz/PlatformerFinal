@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsyadjnp42jyq"]
+
+[ext_resource type="Script" path="res://lvl_screen.gd" id="1_kf10o"]
+[ext_resource type="PackedScene" uid="uid://dyb8nb5ojb54d" path="res://background.tscn" id="1_neejw"]
+
+[node name="LvlScreen" type="Node2D"]
+script = ExtResource("1_kf10o")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_neejw")]
+
+[node name="Lvl1" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 225.0
+offset_right = 380.0
+offset_bottom = 375.0
+text = "Level 1"
+
+[node name="Lvl2" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 225.0
+offset_right = 700.0
+offset_bottom = 375.0
+text = "Level 2"
+
+[node name="Lvl3" type="Button" parent="."]
+offset_left = 720.0
+offset_top = 225.0
+offset_right = 1020.0
+offset_bottom = 375.0
+text = "Level 3"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 450.0
+offset_top = 478.0
+offset_right = 650.0
+offset_bottom = 528.0
+text = "Go Back"
+
+[connection signal="pressed" from="Lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="Lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="Lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
