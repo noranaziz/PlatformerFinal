@@ -1,1 +1,1 @@
-Please proceed to [the final project documentation](final project documentation/final project documentation.docx) and view user instructions. You will find the itch.io link to run the game there :)
+Please proceed to [the final project documentation](https://github.com/noranaziz/PlatformerFinal/blob/6c7b5fdf334df33f809acbfada60f04acf88a42e/final%20project%20documentation/final%20project%20documentation.docx) and view user instructions. You will find the itch.io link to run the game there :)
